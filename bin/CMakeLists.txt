@@ -1,0 +1,6 @@
+file(GLOB BIN_SRC ${PROJECT_SOURCE_DIR}/bin/*.cpp)
+foreach (BIN ${BIN_SRC})
+    get_filename_component(BIN_NAME ${BIN} NAME_WE)
+    add_executable(${BIN_NAME} ${BIN})
+    target_include_directories(${BIN_NAME} PRIVATE ${HELLOWORLD_INCLUDE_DIRECTORIES})
+endforeach()
