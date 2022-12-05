@@ -1,6 +1,6 @@
-# Result-CPP
+# Result-cpp
 
-Result-cpp is a header-only library that provides a [rust-like](https://doc.rust-lang.org/std/result/) Result abstraction (i.e., `Result<T, E>`) following C++17.
+Result-cpp is a header-only library that provides a [rust-like](https://doc.rust-lang.org/std/result/) Result abstraction (i.e., `Result<T, E>`) following C++17 standard.
 
 The header-only file is [here](include/result.hpp).
 
@@ -76,6 +76,8 @@ void basic_rvalue(Result &&result) // note the R-reference here
 ```
 
 ### constexpr
+
+`result` supports `constexpr`, see the [example](bin/constexpr.cpp).
 
 ``` c++
 constexpr Result okay = 10;
